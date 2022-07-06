@@ -1,0 +1,30 @@
+[package]
+name = "actix-request-hook"
+version = "1.0.0-beta.1"
+edition = "2018"
+authors = ["Ana Bujan <ana@eisberg-labs.com>"]
+readme = "README.md"
+repository = "https://github.com/eisberg-labs/actix-request-hook"
+description = "Actix web middleware hook for requests. Enables subscribing to request start and end, request id, elapsed time between requests and more."
+keywords = ["actix", "request", "logger", "middleware", "hook", "actix-web"]
+categories = ["web-programming"]
+license = "MIT/Apache-2.0"
+include = ["src/", "LICENSE-*", "README.md"]
+
+[lib]
+name = "actix_request_hook"
+path = "src/lib.rs"
+
+[dependencies]
+actix-web = "4.0.1"
+actix-http = "3"
+uuid = { version = "0.8.1", features = ["v4"] }
+regex = "1.6.0"
+futures-util = "0.3.7"
+
+[dev-dependencies]
+serde_json = "1.0"
+serde = { version = "1", features = ["derive"] }
+serde_derive = "1.0.116"
+
+
