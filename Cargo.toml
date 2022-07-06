@@ -1,6 +1,6 @@
 [package]
 name = "actix-request-hook"
-version = "1.0.0-beta.2"
+version = "1.0.0-beta.3"
 edition = "2018"
 authors = ["Ana Bujan <ana@eisberg-labs.com>"]
 readme = "README.md"
