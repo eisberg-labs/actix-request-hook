@@ -22,23 +22,17 @@
 //!     Ok("Hi there!".to_string())
 //! }
 //!
-//! #[actix_web::main]
-//! async fn main() -> std::io::Result<()> {
 //!
-//!     HttpServer::new(|| {
-//!         // You can register many different observers.
-//!         // One could be for logging, other for notifying other parts of the system etc.
-//!         let request_hook = RequestHook::new()
+//! // You can register many different observers.
+//! // One could be for logging, other for notifying other parts of the system etc.
+//! let request_hook = RequestHook::new()
 //!            .exclude("/bye") // bye route shouldn't be logged
 //!            .exclude_regex("^/\\d$") // excludes any numbered route like "/123456"
 //!            .register(Rc::new(RequestLogger{}));
-//!         App::new()
-//!             .wrap(request_hook)
-//!             .route("/bye", web::get().to(index))
-//!             .route("/hey", web::get().to(index))
-//!     }).bind("127.0.0.1:0").expect("Can not bind to 127.0.0.1:0")
-//!       .run().await
-//! }
+//! App::new()
+//!     .wrap(request_hook)
+//!     .route("/bye", web::get().to(index))
+//!     .route("/hey", web::get().to(index));
 //!
 //! ```
 //!
