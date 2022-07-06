@@ -22,11 +22,25 @@ struct UselessObserver {
     ended: RefCell<bool>,
 }
 
-impl Default for MyObserver2 {
+impl Default for UselessObserver {
     fn default() -> Self {
         Self {
             started: RefCell::new(false),
             ended: RefCell::new(false),
+        }
+    }
+}
+
+impl Observer for UselessObserver {
+    fn on_request_started(&self, _data: RequestStartData) {
+        *self.started.borrow_mut() = true;
+    }
+
+    // testing if request ended receives mutated property
+    fn on_request_ended(&self, _data: RequestEndData) {
+        let is_started = self.started.borrow();
+        if *is_started {
+            *self.ended.borrow_mut() = true;
         }
     }
 }
