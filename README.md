@@ -1,4 +1,4 @@
-# Actix Permissions [![Continuous Integration](https://github.com/eisberg-labs/actix-request-hook/actions/workflows/ci.yml/badge.svg)](https://github.com/eisberg-labs/actix-request-hook/actions/workflows/ci.yml) [![cargo-badge][]][cargo] [![license-badge][]][license]
+# Actix Request Hook [![Continuous Integration](https://github.com/eisberg-labs/actix-request-hook/actions/workflows/ci.yml/badge.svg)](https://github.com/eisberg-labs/actix-request-hook/actions/workflows/ci.yml) [![cargo-badge][]][cargo] [![license-badge][]][license]
 
 Actix web middleware hook for requests. Enables subscribing to request start and end, request id, elapsed time between requests and more.
 
