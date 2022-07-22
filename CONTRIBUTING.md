@@ -1,6 +1,6 @@
 # Contributing to actix-request-hook
 
-Thanks for your interest and work in actix permissions.
+Thanks for your interest and work in actix-request-hook.
 
 ## Getting Started
 
